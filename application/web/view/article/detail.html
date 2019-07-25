@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit" />
+		<meta name="robots" content="index, follow" />
+		<title>新闻资讯</title>
+		<meta name="keywords" content="新闻资讯" />
+		<meta name="description" content="新闻资讯" />
+		<link rel="stylesheet" type="text/css" href="/static/skin/css/font-awesome.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/static/skin/css/bootstrap.min.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/static/skin/css/owl.carousel.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/static/skin/css/owl.theme.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/static/skin/css/settings.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/static/skin/css/style-red.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/static/skin/css/tk.css" media="screen" />
+		<script type="text/javascript" src="/static/skin/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/static/skin/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/static/skin/js/owl.carousel.min.js"></script>
+	</head>
+
+	<body>
+		<div id="container">
+			{include file="layout/header"}
+
+			<div class="breadcrumb-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-4 bcid-cat">新闻资讯</div>
+						<div class="col-md-9 col-sm-8 location"><i class="fa fa-map-marker"></i> &nbsp;<span>当前位置： <a href='javascript:;'>主页</a> > <a href='javascript:;'>新闻资讯</a> > </span></div>
+					</div>
+				</div>
+			</div>
+			<div class="page-container" id="innerpage-wrap">
+				<div class="container">
+					<div class="row">
+						<div class="main col-md-9 inner-left" role="main">
+							<div class="blog-post blog-post-wrap">
+								<h3 class="text-center bp-title">{$data.title}</h3>
+								<small class="text-center bp-desc"><i class="fa fa-tag"></i> &nbsp;<a href="javascript:;">新闻资讯</a> &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-calendar"></i> &nbsp;{$data.create_at|date="Y-m-d h:i:s"}</small>
+								<div class="com-cnt page-content bp-content">
+									{$data.note|raw}
+
+									<div id="pages" class="page"></div>
+								</div>
+							</div>
+							<script language="JavaScript" src="/static/skin/js/index.js"></script>
+						</div>
+						{include file="layout/aside"}
+					</div>
+				</div>
+			</div>
+			<div class="for-bottom-padding"></div>
+			{include file="layout/footer"}
+		</div>
+		<script type="text/javascript" src="/static/skin/js/jquery.migrate.js"></script>
+		<!--<script type="text/javascript" src="skin/js/jquery.bxslider.min.js"></script>-->
+		<script type="text/javascript" src="/static/skin/js/jquery.imagesloaded.min.js"></script>
+		<script type="text/javascript" src="/static/skin/js/retina-1.1.0.min.js"></script>
+		<script type="text/javascript" src="/static/skin/js/jquery.themepunch.tools.min.js"></script>
+		<script type="text/javascript" src="/static/skin/js/jquery.themepunch.revolution.min.js"></script>
+		<script type="text/javascript" src="/static/skin/js/script.js"></script>
+		<nav id="mmenu" class="noDis">
+			<div class="mmDiv">
+				<div class="MMhead">
+					<a href="#mm-0" class="closemenu noblock">X</a>
+					<a href="javascript:;" target="_blank" class="noblock"><i class="fa fa-weibo"></i></a>
+					<a href="javascript:;" target="_blank" class="noblock"><i class="fa fa-tencent-weibo"></i></a>
+					<!--<a href="javascript:;" target="_blank" class="noblock">English</a>-->
+				</div>
+				<div class="mm-search">
+					<form class="mm-search-form" name="formsearch" action="javascript:;">
+						<input type="hidden" name="kwtype" value="0" />
+						<input type="text" autocomplete="off" value="" name="q" class="side-mm-keyword" placeholder="输入关键字..." />
+					</form>
+				</div>
+				<ul>
+					<li class="m-Lev1 m-nav_0">
+						<a href="index.html">网站首页</a>
+					</li>
+					<li class="m-Lev1 m-nav_4">
+						<a href="javascript:;" class="m-menu1">关于我们</a>
+						<ul class="m-submenu">
+
+							<li class="Lev2">
+								<a href="about_us.html" class="m-menu2">公司简介</a>
+							</li>
+
+							<li class="Lev2">
+								<a href="about_brand.html" class="m-menu2">品牌起源</a>
+							</li>
+
+							<li class="Lev2">
+								<a href="about_album.html" class="m-menu2">公司相册</a>
+							</li>
+
+						</ul>
+					</li>
+					<li class="m-Lev1 m-nav_4">
+						<a href="javascript:;" class="m-menu1">产品系列</a>
+						<ul class="m-submenu">
+
+							<li class="Lev2">
+								<a href="product.html" class="m-menu2">二通道/上下型</a>
+							</li>
+
+							<li class="Lev2">
+								<a href="product.html" class="m-menu2">三通道/转弯型</a>
+							</li>
+
+							<li class="Lev2">
+								<a href="product.html" class="m-menu2">四通道/动作型</a>
+							</li>
+
+							<li class="Lev2">
+								<a href="product.html" class="m-menu2">X-SERIES系列</a>
+							</li>
+
+						</ul>
+					</li>
+					<li class="m-Lev1 m-nav_4">
+						<a href="product_diy.html" class="m-menu1">定制案例</a>
+
+					</li>
+					<li class="m-Lev1 m-nav_4">
+						<a href="news.html" class="m-menu1">新闻资讯</a>
+
+					</li>
+					<li class="m-Lev1 m-nav_4">
+						<a href="product_yuanli.html" class="m-menu1">产品原理</a>
+
+					</li>
+					<li class="m-Lev1 m-nav_4">
+						<a href="javascript:;" class="m-menu1">招商加盟</a>
+						<ul class="m-submenu">
+
+							<li class="Lev2">
+								<a href="join_us.html" class="m-menu2">加盟细则</a>
+							</li>
+
+							<li class="Lev2">
+								<a href="join_us.html" class="m-menu2">加盟流程</a>
+							</li>
+
+							<li class="Lev2">
+								<a href="join_us.html" class="m-menu2">回报优势</a>
+							</li>
+
+						</ul>
+					</li>
+					<li class="m-Lev1 m-nav_4">
+						<a href="contact.html" class="m-menu1">联系我们</a>
+
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<link type="text/css" rel="stylesheet" href="/static/skin/css/jquery.mmenu.all.css" />
+		<script type="text/javascript" src="/static/skin/js/jquery.mmenu.all.min.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				var mmenu = $('nav#mmenu').mmenu({
+					slidingSubmenus: true,
+					classes: 'mm-white', //mm-fullscreen mm-light
+					extensions: ["theme-white"],
+					offCanvas: {
+						position: "right", //left, top, right, bottom
+						zposition: "front" //back, front,next
+						//modal		: true
+					},
+					searchfield: false,
+					counters: false,
+					//navbars		: {
+					//content : [ "prev", "title", "next" ]
+					//},
+					navbar: {
+						title: "网站导航"
+					},
+					header: {
+						add: true,
+						update: true,
+						title: "网站导航"
+					}
+				});
+				$(".closemenu").click(function() {
+					var mmenuAPI = $("#mmenu").data("mmenu");
+					mmenuAPI.close();
+				});
+			});
+		</script>
+	</body>
+
+</html>

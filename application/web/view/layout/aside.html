@@ -1,0 +1,41 @@
+<aside class="sidebar col-md-3 inner-right" role="complementary">
+    <section class="widget side-search">
+        <h3 class="title">站内搜索</h3>
+        <form class="searchform" id="searchform" name="formsearch" action="/index.php/web/Article/articleList">
+            <!--<input type="hidden" name="kwtype" value="0" />-->
+            <div class="sform-div">
+                <input type="text" value="{$title|default=''}" name="title" placeholder="输入关键字" id="s"/>
+                <input type="submit" id="searchsubmit" value="" />
+            </div>
+        </form>
+    </section>
+    <section class="widget widget-category side-contact">
+        <h3 class="title">联系信息</h3>
+        <div class="s-contact"> 手机：{$about_us.mobile}<br /> 电话：400-001-0000
+            <br /> 传真：{$about_us.fax}
+            <br /> 邮箱：{$about_us.email}
+            <br /> 网址：{$about_us.url}
+            <br /> 地址：{$about_us.addr} </div>
+    </section>
+    <section class="widget side-news">
+        <h3 class="title">热点新闻</h3>
+        <div class="tabbed custom-tabbed">
+            <div class="block current">
+                <ul class="widget-list">
+                    {volist name="new" id="vo"}
+                    <li>
+                        <figure>
+                            <a href="/index.php/web/Article/detail?id={$vo.id}"><img src="{$vo.img}" /></a>
+                        </figure>
+                        <div class="sn-wrapper">
+                            <p class="s-desc">
+                                <a href="/index.php/web/Article/detail?id={$vo.id}" title="{$vo.title}">{$vo.title}</a>
+                            </p>
+                            <span class="comments"><i class="fa fa-calendar"></i> &nbsp;{$vo.create_at|date="Y-m-d h:i:s"}</span> </div>
+                    </li>
+                    {/volist}
+                </ul>
+            </div>
+        </div>
+    </section>
+</aside>

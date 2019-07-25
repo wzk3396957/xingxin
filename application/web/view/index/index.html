@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit" />
+		<meta name="robots" content="index, follow" />
+		<title>我的网站</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="order by website" />
+		<link rel="stylesheet" type="text/css" href="/static/skin/css/font-awesome.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/static/skin/css/bootstrap.min.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/static/skin/css/owl.carousel.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/static/skin/css/owl.theme.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/static/skin/css/settings.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/static/skin/css/style-red.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="/static/skin/css/tk.css" media="screen" />
+		<script type="text/javascript" src="/static/skin/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/static/skin/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/static/skin/js/owl.carousel.min.js"></script>
+	</head>
+
+	<body>
+		<div id="container">
+			{include file="layout/header" /}
+
+			<section id="home-section" class="slider1">
+				<div class="tp-banner-container">
+					<div class="tp-banner">
+						<ul>
+							{volist name="banner" id="vo"}
+							<li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="banner1"> <img src="{$vo.img}" alt="{$vo.title}" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" /> </li>
+							{/volist}
+
+						</ul>
+						<div class="tp-bannertimer"></div>
+					</div>
+				</div>
+			</section>
+			<section class="services-section" id="index-cate">
+				<div class="container">
+					<div class="services-box">
+						<div class="row">
+							{volist name="type" id="vo"}
+							<div class="col-md-3 col-sm-6 col-xs-6 cate-itme">
+								<div class="services-post">
+									<a href="javascript:;" class="thumb-link"><img src="{$vo.img}" /></a>
+									<div class="services-content">
+										<h2><a href="javascript:;">{$vo.title}</a></h2>
+										<p>{$vo.intro}</p>
+										<a href="javascript:;" class="readmore">查看更多 <i class="fa fa-angle-double-right"></i></a>
+									</div>
+								</div>
+							</div>
+							{/volist}
+
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="portfolio-section" id="index-portfolio">
+				<div class="container">
+					<h3 class="text-center section-title"><a href="javascript:;">产品系列</a> </h3>
+					<div class="portfolio-box owl-wrapper">
+						<div class="owl-carousel" data-num="4">
+							{volist name="product" id="vo"}
+
+							<div class="item project-post">
+								<div class="project-gallery">
+
+									<img src="{$vo.img}" alt="{$vo.title}" />
+									<div class="hover-box">
+										<div class="inner-hover">
+											<h2><a href="/index.php/web/Product/prodInfo?id={$vo.id}">{$vo.title}</a></h2>
+											<span>{$vo.type}</span> </div>
+									</div>
+
+								</div>
+								<h3 class="iport-h3-title"><a href="/index.php/web/Product/prodInfo?id={$vo.id}" title="{$vo.title}">{$vo.title}</a></h3>
+							</div>
+							{/volist}
+
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="tabs-section" id="index-whyus">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-7 whyus-left">
+							<div class="about-us-box">
+								<h1>选择我们的理由</h1>
+								<p class="whyus-desc">与国内知名大学深度合作，有IC研发团队、电子应用研发中心和客户服务中心，在玩具生产基地拥有结构开发团队和生产工厂。公司从源头做起，专注智能电子玩具行业十年，掌握核心技术，并于2006年通过ISO-9001质量管理体系；生产产品各项检测评估通过多家权威机构检测认证如：SGS、TUV、UL、GS ,CE</p>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="about-us-post">
+											<a><i class="fa fa-star"></i></a>
+											<h2>掌握核心技术，自行研发生产遥控飞机核心部件</h2>
+										</div>
+
+										<div class="about-us-post">
+											<a><i class="fa fa-code"></i></a>
+											<h2>遥控飞机控制程序由公司高级工程师自行开发编写</h2>
+										</div>
+										<div class="about-us-post">
+											<a><i class="fa fa-globe"></i></a>
+											<h2>全球市场70%的遥控飞机，均由我司提供技术支持</h2>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="about-us-post">
+											<a><i class="fa fa-calendar"></i></a>
+											<h2>我们是中国最早的遥控飞机研发参与者之一</h2>
+										</div>
+										<div class="about-us-post">
+											<a><i class="fa fa-empire"></i></a>
+											<h2>中国第一台遥控飞机制造者</h2>
+										</div>
+										<div class="about-us-post">
+											<a><i class="fa fa-money"></i></a>
+											<h2>欧美市场90%的遥控飞机出自我们</h2>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-5 whyus-right">
+							<div class="about-box">
+								<a href="javascript:;"><img src="skin/images/iabout.jpg" /></a>
+								<h2 class="dark-title"><a href="javascript:;">我的网站</a></h2>
+								<div class="iabout-text">
+									<p> 某某有限公司成立于2002年，总部位于惠州市江北德威大厦。与国内知名大学深度合作，拥有IC研发团队、电子应用研发中心和客户服务中心；在玩具生产基地拥有结构开发团队和生产工厂。是一家专业提供 手机遥控飞机 , 遥控玩具飞机 ， 智能遥控飞机 生产厂家。 公司从源头做起，专注智能电子玩具行业十年，掌握核心技术，并于2006年通过ISO-9001质量管理体系；生产产品各项检... </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="news-section" id="index-news">
+				<div class="container">
+					<h3 class="text-center section-title"><a href="javascript:;">新闻资讯</a> </h3>
+					<div class="news-box owl-wrapper">
+						<div class="owl-carousel" data-num="4">
+						{volist name="article" id="vo"}
+							<div class="item news-post">
+								<div class="news-gallery">
+									<a href="/index.php/web/Article/detail?id={$vo.id}" class="thumb-link"><img src="{$vo.img}" alt="{$vo.title}" /></a>
+									<div class="date-post">
+										<p>{$vo.create_at|date="Y-m"} <span>{$vo.create_at|date="d"}</span></p>
+									</div>
+								</div>
+								<div class="news-content">
+									<h2 class="inews-title"><a href="/index.php/web/Article/detail?id={$vo.id}" title="{$vo.title}">{$vo.title}</a></h2>
+									<p class="desc">{$vo.intro}</p>
+									<a href="/index.php/web/Article/detail?id={$vo.id}" class="news-readmore">阅读更多 <i class="fa fa-angle-right"></i></a>
+								</div>
+							</div>
+
+						{/volist}
+						</div>
+					</div>
+				</div>
+			</section>
+			{include file="layout/footer"}
+		</div>
+		<script type="text/javascript" src="/static/skin/js/jquery.migrate.js"></script>
+		<!--<script type="text/javascript" src="skin/js/jquery.bxslider.min.js"></script>-->
+		<script type="text/javascript" src="/static/skin/js/jquery.imagesloaded.min.js"></script>
+		<script type="text/javascript" src="/static/skin/js/retina-1.1.0.min.js"></script>
+		<script type="text/javascript" src="/static/skin/js/jquery.themepunch.tools.min.js"></script>
+		<script type="text/javascript" src="/static/skin/js/jquery.themepunch.revolution.min.js"></script>
+		<script type="text/javascript" src="/static/skin/js/script.js"></script>
+		<nav id="mmenu" class="noDis">
+			<div class="mmDiv">
+				<div class="MMhead">
+					<a href="#mm-0" class="closemenu noblock">X</a>
+					<a href="javascript:;" target="_blank" class="noblock"><i class="fa fa-weibo"></i></a>
+					<a href="javascript:;" target="_blank" class="noblock"><i class="fa fa-tencent-weibo"></i></a>
+					<!--<a href="javascript:;" target="_blank" class="noblock">English</a>-->
+				</div>
+				<div class="mm-search">
+					<form class="mm-search-form" name="formsearch" action="javascript:;">
+						<input type="hidden" name="kwtype" value="0" />
+						<input type="text" autocomplete="off" value="" name="q" class="side-mm-keyword" placeholder="输入关键字..." />
+					</form>
+				</div>
+				<ul>
+					<li class="m-Lev1 m-nav_0">
+						<a href="index.html">网站首页</a>
+					</li>
+					<li class="m-Lev1 m-nav_4">
+						<a href="javascript:;" class="m-menu1">关于我们</a>
+						<ul class="m-submenu">
+
+							<li class="Lev2">
+								<a href="about_us.html" class="m-menu2">公司简介</a>
+							</li>
+
+							<li class="Lev2">
+								<a href="about_brand.html" class="m-menu2">品牌起源</a>
+							</li>
+
+							<li class="Lev2">
+								<a href="about_album.html" class="m-menu2">公司相册</a>
+							</li>
+
+						</ul>
+					</li>
+					<li class="m-Lev1 m-nav_4">
+						<a href="javascript:;" class="m-menu1">产品系列</a>
+						<ul class="m-submenu">
+
+							<li class="Lev2">
+								<a href="product.html" class="m-menu2">二通道/上下型</a>
+							</li>
+
+							<li class="Lev2">
+								<a href="product.html" class="m-menu2">三通道/转弯型</a>
+							</li>
+
+							<li class="Lev2">
+								<a href="product.html" class="m-menu2">四通道/动作型</a>
+							</li>
+
+							<li class="Lev2">
+								<a href="product.html" class="m-menu2">X-SERIES系列</a>
+							</li>
+
+						</ul>
+					</li>
+					<li class="m-Lev1 m-nav_4">
+						<a href="product_diy.html" class="m-menu1">定制案例</a>
+
+					</li>
+					<li class="m-Lev1 m-nav_4">
+						<a href="news.html" class="m-menu1">新闻资讯</a>
+
+					</li>
+					<li class="m-Lev1 m-nav_4">
+						<a href="product_yuanli.html" class="m-menu1">产品原理</a>
+
+					</li>
+					<li class="m-Lev1 m-nav_4">
+						<a href="javascript:;" class="m-menu1">招商加盟</a>
+						<ul class="m-submenu">
+
+							<li class="Lev2">
+								<a href="join_us.html" class="m-menu2">加盟细则</a>
+							</li>
+
+							<li class="Lev2">
+								<a href="join_us.html" class="m-menu2">加盟流程</a>
+							</li>
+
+							<li class="Lev2">
+								<a href="join_us.html" class="m-menu2">回报优势</a>
+							</li>
+
+						</ul>
+					</li>
+					<li class="m-Lev1 m-nav_4">
+						<a href="contact.html" class="m-menu1">联系我们</a>
+
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<link type="text/css" rel="stylesheet" href="/static/skin/css/jquery.mmenu.all.css" />
+		<script type="text/javascript" src="/static/skin/js/jquery.mmenu.all.min.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				var mmenu = $('nav#mmenu').mmenu({
+					slidingSubmenus: true,
+					classes: 'mm-white', //mm-fullscreen mm-light
+					extensions: ["theme-white"],
+					offCanvas: {
+						position: "right", //left, top, right, bottom
+						zposition: "front" //back, front,next
+						//modal		: true
+					},
+					searchfield: false,
+					counters: false,
+					//navbars		: {
+					//content : [ "prev", "title", "next" ]
+					//},
+					navbar: {
+						title: "网站导航"
+					},
+					header: {
+						add: true,
+						update: true,
+						title: "网站导航"
+					}
+				});
+				$(".closemenu").click(function() {
+					var mmenuAPI = $("#mmenu").data("mmenu");
+					mmenuAPI.close();
+				});
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,125 @@
+<header class="clearfix" id="header-sec">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="top-line">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-9 topbar-left">
+                        <ul class="info-list">
+                            <li class="tb-adword"> <i class="fa fa-anchor"></i> <span>厂家直销，玩具批发，加盟招商第一品牌</span> </li>
+                            <li class="tb-phone"> <i class="fa fa-phone"></i> 服务热线: <span>{$about_us.telephone}</span> </li>
+                            <li class="tb-email"> <i class="fa fa-envelope-o"></i> 电子邮箱: <span>{$about_us.email}</span> </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-sm-3 topbar-right">
+                        <ul class="social-icons">
+                            <!--<li>-->
+                            <!--<a href="javascript:;" target="_blank"><i class="fa fa-weibo"></i></a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--<a href="javascript:;" target="_blank"><i class="fa fa-tencent-weibo"></i></a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--<a href="javascript:;" target="_blank"><i class="fa fa-qq"></i></a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--<a href="javascript:;" target="_blank"><i class="fa fa-shopping-cart"></i></a>-->
+                            <!--</li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-toggle collapsed mmenu-btn" href="#mmenu"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+                <!--<a class="navbar-brand" href="javascript:;"> <img src="skin/images/logo.png" alt="" class="logo" /> <img src="skin/images/logo-m.png" alt="" class="logo-m" /> </a>-->
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right" id="navigation">
+                    <li class="Lev1">
+                        <a href="/index.php/web/index/index" class='menu1 active'>网站首页 </a>
+                    </li>
+                    <li class="Lev1">
+                        <a href="about_us.html" class="menu1 ">关于我们
+                            <i class="fa fa-caret-down"></i></a>
+                        <ul class="drop-down sub-menu2">
+
+                            <li class="Lev2">
+                                <a href="about_us.html" class="menu2">公司简介</a>
+                            </li>
+
+                            <li class="Lev2">
+                                <a href="about_brand.html" class="menu2">品牌起源</a>
+                            </li>
+
+                            <li class="Lev2">
+                                <a href="about_album.html" class="menu2">公司相册</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="Lev1">
+                        <a href="/index.php/web/Product/productList" class="menu1 ">产品系列
+                            <i class="fa fa-caret-down"></i></a>
+                        <ul class="drop-down sub-menu2">
+                            {volist name="type" id="vo"}
+                            <li class="Lev2">
+                                <a href="/index.php/web/Product/productList?type_id={$vo.id}" class="menu2">{$vo.title}</a>
+                            </li>
+                            {/volist}
+
+
+                        </ul>
+                    </li>
+                    <li class="Lev1">
+                        <a href="/index.php/web/Product/productList" class="menu1 ">定制案例
+                        </a>
+
+                    </li>
+                    <li class="Lev1">
+                        <a href="/index.php/web/Article/articleList" class="menu1 ">新闻资讯
+                        </a>
+
+                    </li>
+                    <!--<li class="Lev1">-->
+                        <!--<a href="product_yuanli.html" class="menu1 ">产品原理-->
+                        <!--</a>-->
+
+                    <!--</li>-->
+                    <!--<li class="Lev1">-->
+                        <!--<a href="join_us.html" class="menu1 ">招商加盟-->
+                            <!--<i class="fa fa-caret-down"></i></a>-->
+                        <!--<ul class="drop-down sub-menu2">-->
+
+                            <!--<li class="Lev2">-->
+                                <!--<a href="join_us.html" class="menu2">加盟细则</a>-->
+                            <!--</li>-->
+
+                            <!--<li class="Lev2">-->
+                                <!--<a href="join_us.html" class="menu2">加盟流程</a>-->
+                            <!--</li>-->
+
+                            <!--<li class="Lev2">-->
+                                <!--<a href="join_us.html" class="menu2">回报优势</a>-->
+                            <!--</li>-->
+
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <li class="Lev1">
+                        <a href="/index.php/web/Contact/index" class="menu1 ">联系我们
+                        </a>
+
+                    </li>
+                    <li class="search nav-search">
+                        <a href="javascript:;" class="open-search"><i class="fa fa-search"></i></a>
+                        <form class="form-search" id="searchform" name="formsearch" action="javascript:;">
+                            <input type="hidden" name="kwtype" value="0" />
+                            <input type="search" value="" name="q" class="search-input" placeholder="输入关键字" />
+                            <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
